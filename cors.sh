@@ -1,41 +1,12 @@
 #!/bin/bash
-
-#arg=$1
-#domain=$2
-
-#case $arg in
-
-#  -h)
-#    echo -ne "useage of $0 -c domain_name\n"
-#   ;;
-
-#  -c)
-#    found=$(curl -i  -H "Origin:evil.com"  $domain  | grep -i  'evil.com')
-#    echo $found
-#    if [ ! -z $found ]
-#    then
-	#telegram-send "Cors"
-        #echo -ne "$domain"
-    #fi
-    #;;
-
-  #*)
-    #echo -ne "useage of $0 -c domain_name\n"
-    #;;
-#esac
-
-### ===============================================
-
-
-#!/bin/bash
-
+## By Rizwan(twitter.com/rizwan_SiDdiqu1)
 arg=$1
 urlpath=$2
 #save=$3
 
 case $arg in
   -h)
-   echo -ne "useage of $0 -c waybackurl or gau url path and give domain name for to output\n"
+   echo -ne "useage of $0 -c waybackurl or gau url path and give domain name for to output\nBy Rizwan(twitter.com/rizwan_SiDdiqu1)\n"
    ;;
 
   -c)
