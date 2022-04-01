@@ -7,6 +7,7 @@ if [ -f $waybackfile ]
 then
     for url in $(cat $waybackfile)
     do
+        count=0
         echo "Url is picked"
         for pay in $(cat /mnt/f/wordlist/open-redirect.txt)
         do
@@ -18,12 +19,12 @@ then
                 title=$(curl -s -L $final | grep -i "<title>Evil.Com")
                 if [[ ! -z "$title" ]]
                 then
-                    ((count=count+1))
-                    echo "$final is \033[0;31mVulnerable\n" | tee -a find-open-redirect.txt
                     if [[ $count -eq 1 ]]
                     then
                         break
                     fi
+                    echo "$final is \033[0;31mVulnerable\n" | tee -a find-open-redirect.txt
+                    ((count=count+1))
                 fi
             fi
         done
